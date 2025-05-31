@@ -1,8 +1,7 @@
 MENU = "G - Get a valid score\nP - Print result\nS - Show stars\nQ - Quit"
 
-
 def main():
-    score = float(input("Enter score: "))
+    score = ""
     print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":

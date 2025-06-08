@@ -13,14 +13,15 @@ in_file.close()
 print(f"Hi {name_from_file}!")
 
 # 3. Read the first two numbers from 'numbers.txt' and print their sum
-with open('numbers.txt', 'r') as file:
-    Digit1 = int(in_file.readline())
-    Digit2 = int(in_file.readline())
-    print(f"Sum of first two numbers: {Digit1 + Digit2}")
+with open('numbers.txt', 'r') as in_file:
+    first_number = int(in_file.readline())
+    second_number = int(in_file.readline())
+print(f"Sum of first two numbers: {first_number + second_number}")
 
 # 4. Print the total of all numbers in 'numbers.txt'
 total = 0
-for line in in_file:
-    number = int(line.strip())
-    total += number
-print("The sum of all lines is", total)
+with open("numbers.txt", "r") as in_file:
+    for line in in_file:
+        number = int(line.strip())
+        total += number
+print(f"The sum of all lines is {total}")

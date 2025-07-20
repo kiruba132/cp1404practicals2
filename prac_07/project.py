@@ -16,11 +16,25 @@ class Project:
                 f"priority {self.priority}, estimate: ${self.cost_estimate:,.2f}, "
                 f"completion: {self.completion_percentage}%")
 
+    def __lt__(self, other):
+        """Enable sorting by project priority."""
+        return self.priority < other.priority
+
     def is_complete(self):
+        """Check if the project is complete."""
         return self.completion_percentage == 100
 
-    def __lt__(self, other):
-        return self.priority < other.priority
+    def update_completion(self, completion_percentage):
+        """Update the completion percentage of the project."""
+        self.completion_percentage = int(completion_percentage)
+
+    def update_priority(self, priority):
+        """Update the priority of the project."""
+        self.priority = int(priority)
+
+    def starts_after(self, date):
+        """Check if the project starts after the given date."""
+        return self.start_date > date
 
     def to_tab_string(self):
         """Return a tab-separated string for saving."""

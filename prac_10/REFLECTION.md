@@ -35,7 +35,7 @@ For each one, write a short explanation of what was good about your review.
 
 ### Good Code Review 1
 
-[]()
+[https://github.com/ron991/cp1404practicals/pull/1]()
 
 ### Explanation
 
@@ -43,7 +43,7 @@ In this review, I clearly explained why a certain function needed better naming 
 
 ### Good Code Review 2
 
-[]()
+[https://github.com/EdwardMorse/cp1404practicals/pull/5]()
 
 ### Explanation
 
